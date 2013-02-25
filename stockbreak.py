@@ -62,7 +62,7 @@ def main():
     username, password = line.strip().split(':')
     f.close()
 
-    g = open('dates.log', 'a+')
+    g = open('dates.txt', 'a+')
     g.seek(0)
     lines = g.readlines()
     lastdate = lines[-1]
