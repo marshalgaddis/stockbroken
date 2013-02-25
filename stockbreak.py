@@ -6,7 +6,7 @@ import stocktrim
 
 
 def drive(driver, username, password, startdate="01/01/2013",
-          enddate=datetime.date.today().strftime("%d/%m/%Y")):
+          enddate=datetime.date.today().strftime("%m/%d/%Y")):
     base_url = "https://secure.lightspeed.com"
 
     driver.get(base_url + "/secure/index.php")
@@ -80,7 +80,7 @@ def main():
         outfile.write(line)
     outfile.close()
 
-    g.write(datetime.date.today().strftime("%d/%m/%Y") + "\n")
+    g.write(datetime.date.today().strftime("%m/%d/%Y") + "\n")
     g.close()
 
 
