@@ -1,3 +1,4 @@
 names.txt
-.RData
-.RHistory
+*.RData
+*.RHistory
+*.pyc
