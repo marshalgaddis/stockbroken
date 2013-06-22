@@ -54,3 +54,45 @@ findNN <- function(ref) {
   cat("winner is: ", winner)
   return(winner)
 }
+
+### The earlier functions should be redefined in terms of this one
+
+retrieveTS <- function(stock, period) {
+  query <- read.csv(paste("trialdata/",stock,sep=''),
+                    header=FALSE, as.is=TRUE,
+                    col.names=c("symbol","date","time",
+                                "open","high","low","close","volume"))
+  
+  dt = paste(query$date, query$time, sep=' ')
+  query$datetime <- as.numeric(strptime(dt, "%Y-%m-%d %H:%M:%S"))
+  # query_ts <- subset(query, select=c(datetime,open),datetime %in% ref$datetime)
+  query$datetime <- (query$datetime - query$datetime[1]) / period
+  
+  query$open <- 100 * (query$open)/(query$open[1])
+
+  return(subset(query, select = c(datetime, open)))
+}
+
+### Unused because folding in R sucks 
+instersectAppend <- function(accumulatedFrame, stock) {
+  y <- retrieveTS(stock,300)
+  merge(y, accumulatedFrame, by="datetime", all=TRUE)
+}
+
+### Lots of missing data (means lots of "NA"s in the final matrix). Needs
+### to be cleaned up by copying previous values
+
+buildMatrix <- function(files) {
+  mat <- retrieveTS(files[1],300)
+  matsuffix <- unlist(strsplit(files, "\\."))[1]
+  for (stock in files[2:length(files)]) {
+    y <- retrieveTS(stock,300)
+    ysuffix <- unlist(strsplit(stock, "\\."))[1]
+    mat <- merge(y, mat, by="datetime", all=TRUE,
+                 suffixes = c(ysuffix, ""))
+    print(mat)
+  }
+  colnames(mat)[length(mat)] <- paste("open", matsuffix, sep="")
+  print(mat)
+  return(mat)
+}
