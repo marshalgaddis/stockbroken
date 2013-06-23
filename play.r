@@ -90,9 +90,24 @@ buildMatrix <- function(files) {
     ysuffix <- unlist(strsplit(stock, "\\."))[1]
     mat <- merge(y, mat, by="datetime", all=TRUE,
                  suffixes = c(ysuffix, ""))
-    print(mat)
+    # print(mat)
   }
   colnames(mat)[length(mat)] <- paste("open", matsuffix, sep="")
-  print(mat)
+  # print(mat)
   return(mat)
+}
+
+repeat.before = function(x) {   # repeats the last non NA value. Keeps leading NA
+  ind = which(!is.na(x))      # get positions of nonmissing values
+  if(is.na(x[1]))             # if it begins with a missing, add the 
+    ind = c(1,ind)        # first position to the indices
+  rep(x[ind], times = diff(   # repeat the values at these indices
+    c(ind, length(x) + 1) )) # diffing the indices + length yields how often 
+}                               # they need to be repeated
+
+tightenUp <- function(tss) {
+  for (i in 2:(length(tss))) {
+    tss[,i] <- repeat.before(tss[,i])
+  }
+  return(tss)
 }
