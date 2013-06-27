@@ -1,4 +1,5 @@
-compareStocks <- function(queryStock,referenceStock,plot=FALSE) {
+compareStocks <- function(queryStock,referenceStock,
+                          plot=FALSE,twoway=TRUE,heat=FALSE) {
   query <- read.csv(paste("trialdata/",toupper(queryStock),".csv",sep=''),
                     header=FALSE, as.is=TRUE,
                     col.names=c("symbol","date","time",
@@ -27,9 +28,18 @@ compareStocks <- function(queryStock,referenceStock,plot=FALSE) {
   
   ans <- dtw(q,r,k=TRUE,dist.method="Euclidean")
   if (plot == TRUE) {
-    plot(ans,type="two",off=1,match.lty=2,match.indices=20)
-  }
-  
+    if (twoway == TRUE) {
+      plot(ans,type="two",off=1,match.lty=2,match.indices=20)
+    }
+    else if (heat) {
+      par(mfrow=c(1,2))
+      plot(ans,type="three",off=1,match.lty=2,match.indices=20)
+      heatmap(as.matrix(ans$costMatrix),Rowv=NA,Colv=NA)
+    }
+    else {
+      plot(ans,type="three",off=1,match.lty=2,match.indices=20)
+    }
+  }  
   return(ans$distance)
 }
 
