@@ -1,0 +1,4 @@
+names.txt
+*.RData
+*.RHistory
+*.pyc
