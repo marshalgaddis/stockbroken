@@ -1,5 +1,5 @@
-# TODO: remove redundant trialdata in this shinysb directory; figure out why
-# this app can't just pull the data from the parent directory
+# TODO: make variable names based on query and reference more consistent
+
 `%tin%` <- function(x, y) {
     mapply(assign, as.character(substitute(x)[-1]), y,
       MoreArgs = list(envir = parent.frame()))
@@ -118,16 +118,16 @@ testfunc <- function(arg) {
 
 # TODO: move the data retrieval function into its own reactive server.R
 # variable, then pass that in as the only argument to findNN().
-findNN <- function(symbol, period, referenceURL) {
+findNN <- function(symbol, ref) {
   winner <- NULL
   winDist <- Inf
-  ref <- retrieveGoogleData(toupper(symbol), period, referenceURL)
+  # ref <- retrieveGoogleData(toupper(symbol), period, referenceURL)
   print(head(ref))
   print(list.files("../trialdata"))
   for (stock in list.files("../trialdata")) {
     stockName <- unlist(strsplit(stock, "\\."))[1]
     print(stockName)
-    if (toupper(symbol) != stockName) {
+    if (symbol != stockName) {
       val <- compareAgainst(stockName,ref)$distance
       cat("stock: ", stockName, ",  dtw: ", val, "\n")
       if (val < winDist) {
