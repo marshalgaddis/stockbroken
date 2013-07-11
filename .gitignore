@@ -2,3 +2,4 @@ names.txt
 *.RData
 *.RHistory
 *.pyc
+*.Rapp.history
