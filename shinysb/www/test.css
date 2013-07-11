@@ -1,0 +1,16 @@
+/* Honeyd Do color scheme: */
+/* rgb(244,250,199), rgb(123,173,141), rgb(255,177,88), rgb(247,127,69), rgb(194,69,78) */
+/* #F4FAC7, #7BAD8D, #FFB158, #FFB158, #C2454E */
+
+html {
+  background-color:#7BAD8D; margin: 0; padding: 0;
+}
+
+body {
+  font-family:"Gill Sans", Verdana, Helvetica, sans-serif; font-size:12px; color:#000;
+  min-height:40em; width:50em; margin:2em auto; padding:2em; background-color:#fff;
+}
+
+li a {
+  color:#fff;
+}

@@ -1,0 +1,250 @@
+plot(h, labels=observedLabels, main="")
+rect.hclust(h, k=6)
+memb <- cutree(h, k=6)
+table(observedLabels, memb)
+heatmap(distMatrix)
+dM <- as.matrix(distMatrix)
+?heatmap
+heatmap(dM)
+heatmap(dM, Rowv=observedLabels)
+heatmap(dM, Colv=observedLabels)
+heatmap(dM, Rowv=observedLabels)
+heatmap(dM, Rowv=NA, Colv=NA)
+update.packages()
+update.packages(checkBuilt=TRUE, ask=FALSE)
+c <- cat("one","two")
+c
+c <- paste("one","two")
+c
+strsplit("1,2,3,4\n5,6,7,8\n9,10,11,12", "\n")
+strsplit("1,2,3,4\n5,6,7,8\n9,10,11,12", "\n")[[1]]
+c <- strsplit("1,2,3,4\n5,6,7,8\n9,10,11,12", "\n")[[1]]
+c
+c[1]
+c[2]
+c, d <- [1,2]
+c[1]
+c[1][2:]
+c[1][2:length(c)]
+c[1][2:length(c[1])]
+c[1][2:length(c[1])-1]
+c[1][3:length(c[1])-1]
+c(4:9)
+4:9
+c[1][2:length(c[1])]
+c[1][3:length(c[1])]
+a <- "1234"
+a[1]
+a
+a[[1]]
+a[0]
+a[2]
+c[1]
+a
+unlist(strsplit(a,""))
+unlist(strsplit(a,""))[2:length(a)]
+length(a)
+unlist(strsplit(a,""))[2:length(unlist(strsplit(a,"")))]
+unlist(strsplit(a,""))[2:]
+startsWith(a,"1")
+library(lang)
+library(R.lang)
+"a" %in% "abc"
+lapply(strsplit('1234', ''), function(x) which('1234' == '2'))
+lapply(strsplit('1234', ''), function(x) which('1234' == '2'))[[1]]
+unlines(strsplit("abcde",""))[[1]] == "a"
+unline(strsplit("abcde",""))[[1]] == "a"
+unlist(strsplit("abcde",""))[[1]] == "a"
+unlist(strsplit("abcde",""))[[1]] == "b"
+unlist(strsplit("abcde",""))[[1]] == 'a'
+x <- 'hello stackoverflow'
+substring(x,1,1)
+substring(x,2)
+Map(as.numeric(), c("1","2","3","3"))
+Map(as.numeric, c("1","2","3","3"))
+m <- Map(as.numeric, c("1","2","3","3"))
+m
+m[1]
+m[2]
+m[1:3]
+type(m)
+m$3
+summary(m)
+?Map
+mapply(rep, 1:4, 4:1)
+rep 1 4
+rep(1,4)
+rep(2,3)
+m <- mapply(as.numeric, c("1","2","3","3"))
+m
+m[1]
+m$1
+m[2:4]
+length(m)
+setwd("~/Code/shinysb/")
+ls()
+source("play.r")
+source("play.r")
+source("play.r")
+source("play.r")
+retrieveGoogleData("http://www.google.com/finance/getprices?q=abg&i=300&p=1d&f=d,o,h,l,c,v")
+retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+library(shiny)
+library(datasets)
+library(dtw)
+library(RCurl)
+library(RCurl)
+retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+source("play.r")
+retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+r[1]
+summary(r)
+r[2]
+r[3]
+r[4]
+strsplit("58,43.7,43.77,43.65,43.72,1635", ',')[[1]]
+c(off,c,h,l,o,v) %tin% (strsplit(lines[1], ',')[[1]])
+c(off,c,h,l,o,v) %tin% (strsplit("76,43.6,43.66,43.48,43.55,6989", ',')[[1]])
+off
+c
+c(off,c,h,l,o,v) %tin% strsplit("76,43.6,43.66,43.48,43.55,6989", ',')[[1]]
+off
+c
+c(off,c,h,l,o,s) %tin% strsplit("76,43.6,43.66,43.48,43.55,6989", ',')[[1]]
+s
+v
+cat("one","two")
+cat("one",2)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+c
+o
+h
+l
+c
+as.numeric(c(o,h,l,c))
+c
+h
+l
+o
+c(o,h,l,c) %tin% as.numeric(c(o,h,l,c))
+o
+h
+l
+c
+dt <- as.POSIXct(1373463300 + (300 * off), origin='1970-01-01')
+off
+off <- as.numeric(off)
+dt <- as.POSIXct(1373463300 + (300 * off), origin='1970-01-01')
+dt
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+r
+seq(4)
+?rbind
+returnData <- as.data.frame(matrix(rep(NA, length(lines)*5)),ncol=5)
+returnData
+lines
+returnData <- as.data.frame(matrix(rep(NA, 73*5)),ncol=5)
+head(returnData)
+returnData
+returnData <- as.data.frame(matrix(rep(NA, 73*5),ncol=5))
+head(returnData)
+returnData
+returnData[2]
+returnData[,2]
+returnData[2,]
+o
+dt
+returnData[2,] <- c(dt,o,h,l,c)
+head(returnData)
+returnData
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+head(r)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+head(r)
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+head(r)
+compareAgainst("abg", r)
+source("play.r")
+q <- compareAgainst("abg", "r")
+head(q)
+summary(q)
+summary(r)
+dt
+dt[1]
+getDate(dt)
+as.Date(dt)
+as.Time(dt)
+dt
+format(dt$time, "%H:%M:%S")
+format(dt, "%H:%M:%S")
+type(dt)
+as.POSIXct(format(dt, "%H:%M:%S"))
+as.POSIXct(format(dt, "%H:%M:%S"), format="%H:%M:%S")
+source("play.r")
+r <- retrieveGoogleData("http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v", 300)
+head(r)
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+head(r)
+summary(r)
+q <- compareAgainst("abg", "r")
+summary(q)
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+summary(r)
+q <- compareAgainst("abg", "r")
+summary(q)
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+head(r)
+summary(r)
+c(open,high) %tin% as.numeric(c(r$open, r$high))
+head(open)
+open
+r$open
+c(r$open, r$high)
+as.numeric(c(r$open, r$high))
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+head(r)
+summary(r)
+head(r)
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+summary(r)
+source("play.r")
+r <- retrieveGoogleData("ABG",300,"http://www.google.com/finance/getprices?q=ABG&i=300&p=1d&f=d,o,h,l,c,v")
+summary(r)
+q <- compareAgainst("abg", "r")
+summary(q)
+source("play.r")
+q <- compareAgainst("abg", r)
