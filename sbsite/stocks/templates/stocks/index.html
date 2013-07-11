@@ -1,0 +1,24 @@
+{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stocks/style.css' %}" />
+
+
+<form action="{% url 'stocks:retrieve' %}" method="post">
+{% csrf_token %}
+<input type="text" name="stockname" />
+<input type="text" name="interval" />
+<input type="date" name="start_date" />
+<input type="submit" value="Look up stock" />
+</form>
+
+
+{% if latest_stock_list %}
+    <ul>
+    {% for stock in latest_stock_list %}
+        <li><a href="{% url 'stocks:detail' stock.id %}">{{ stock.ticker }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No stocks are available.</p>
+{% endif %}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}

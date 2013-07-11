@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'stocks/style.css' %}" />
+
+<img src="{% static 'stocks/images/tmp.png' %}" alt="graph" width="512" height="512" />
+
+<h1>{{ stockname }}</h1>
+
+{% if history %}
+    <ul>
+    {% for line in history %}
+        <li>{{ line }}</li>
+    {% endfor %}
+{% else %}
+    <p> Something went wrong.</p>
+{% endif %}
+
+<!-- {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %} -->
