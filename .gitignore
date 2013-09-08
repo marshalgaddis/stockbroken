@@ -2,3 +2,5 @@ names.txt
 *.RData
 *.RHistory
 *.pyc
+*.Rapp.history
+*.DS_Store

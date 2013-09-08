@@ -1,0 +1,46 @@
+<!DOCTYPE HTML >
+<html><head>
+
+
+  <script src="shared/jquery.js" type="text/javascript"></script>
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="shared/shiny.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-responsive.css">
+  <link rel="stylesheet" type="text/css" href="test.css"><title></title></head>
+  
+  <body>
+<br>
+<br>
+  <h1 align="center">Stockbroken</h1>
+<br>
+   <div id="input">
+      <input name="stock" value="abg" type="text" style="font-size:24px"><br>
+      <input name="period" value="300" type="text" style="font-size:24px"><br>
+      <input name="days" value="1" type="text" style="font-size:24px">
+    </div>
+   
+<div style="height: 100px"></div>  
+  <div id="display">
+    <div id="winner" class="shiny-text-output"></div>
+    <div id="compPlot" class="shiny-plot-output"></div>
+    
+    <div id="sidebar">
+      <label>Recent Stocks:</label>
+      <br><br>
+      <div id="recent" class="shiny-html-output"></div>
+    </div>
+    <div id="query" class="shiny-text-output"></div>
+  </div> 
+<br>
+<div style="height: 200px"></div>
+
+</body>
+<footer>
+  <div id="source">
+    <p> Fetching data from: </p>
+    <p id="queryReport" class="shiny-text-output" ,="" style="margin-top: 0pt; float: left;">Loading</p>
+</div>
+</footer>
+
+</html>

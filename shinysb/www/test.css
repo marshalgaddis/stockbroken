@@ -1,0 +1,84 @@
+/* Honeyd Do color scheme: */
+/* rgb(244,250,199), rgb(123,173,141), rgb(255,177,88), rgb(247,127,69), rgb(194,69,78) */
+/* #F4FAC7, #7BAD8D, #FFB158, #FFB158, #C2454E */
+
+html {
+  background-color:"White";
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family:"Avenir";
+  font-size:24px;
+  color:#000;
+  background-color:"White";
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#input{
+  width: 12%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family:Avenir;
+  color:#000;
+  class:form-control;
+  id:focusedInput;
+  type:text;
+}
+
+#display {
+ clear:both;
+ width: 80%;
+margin-left: auto;
+margin-right: auto;
+height: 400px;
+}
+
+#winner{
+  width: 300px;
+  margin: 0px auto;
+  position: relative;
+  text-align: center;
+  }
+  
+#funbits{
+  position: relative;
+}
+#compPlot {
+ height: 400px;
+ width: 1000px;
+margin: 0 auto;
+}
+
+#sidebar {
+  width:10em; 
+  float: right;
+  padding-left: 40px;
+  top: 50px;
+  left: 1200px;
+  }
+
+#recent {
+  overflow: auto; width:200px; height:280px;
+}
+
+#query{
+  width: 300px;
+  margin: 0px auto;
+  position: relative;
+  text-align: center;
+  }
+.debug {
+  border:1pt;
+  border-style:dotted;
+}
+
+#source{
+  position:fixed;
+  bottom: 0;
+  font-size: 20px;
+}
